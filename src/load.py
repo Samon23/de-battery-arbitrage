@@ -1,5 +1,6 @@
 import pandas as pd
 from pathlib import Path
+import sqlite3
 
 RAW = Path("data/raw/day_ahead_2025.csv")
 
@@ -55,6 +56,13 @@ def check_calendar(df):
     print(odd)
     return odd
 
+def to_sqlite(df, db_path="data/prices.db"):
+    """Write the tidy frame to a SQLite table called prices."""
+    con = sqlite3.connect(db_path)
+    df.to_sql("prices", con, if_exists="replace", index=False)
+    con.close()
+    print(f"wrote {len(df):,} rows to {db_path}")
+    
 if __name__ == "__main__":
     df = load_raw()
     audit(df, "raw SMARD export")
