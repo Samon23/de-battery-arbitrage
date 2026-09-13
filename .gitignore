@@ -1,0 +1,19 @@
+# raw market data stays local — it is large and re-downloadable
+data/
+*.csv
+*.db
+
+# but results must be committed, so un-ignore them
+!outputs/
+!outputs/*.csv
+
+# python noise
+__pycache__/
+.venv/
+venv/
+.ipynb_checkpoints/
+.env
+
+# editor settings — yours, not the project's
+.vscode/
+.idea/
