@@ -17,6 +17,9 @@ most expensive, on real German day-ahead market prices.
 - The best single day earned **EUR 687** on 2025-05-11; **0** days would have lost money.
 - **573** of 8,760 hours had negative prices — hours where a battery is *paid* to charge.
 - Revenue is strongly seasonal, concentrated in [FILL: which months look highest on your monthly chart].
+- A naive forecast (same hour, one week earlier) captures **79.3%** of the
+  perfect-foresight revenue, quantifying how much of this result depends on
+  knowing prices in advance.
 
 ## Charts
 
@@ -83,6 +86,9 @@ Also excluded:
 - Intraday and balancing market revenue, which in practice form a large share of
   a real battery's income.
 - Any optimisation of cycles per day, which is fixed at one here.
+- Re-running the strategy on a naive one-week-lag forecast rather than actual
+prices captures 79.3% of the theoretical maximum, with a mean absolute forecast
+error of EUR 32.68/MWh.
 
 ## Repository structure
 
