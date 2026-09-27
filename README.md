@@ -11,7 +11,7 @@ Built with Python, Pandas and SQLite.
 - A 1 MW / 2 MWh battery would have earned **EUR 68,050** across 2025.
 - The best single day earned **EUR 687** on 2025-05-11, and **0** days would have lost money.
 - **573** of 8,760 hours had negative prices, hours where a battery is *paid* to charge.
-- Revenue is strongly seasonal, concentrated in **JULY**.
+- Revenue is strongly seasonal, concentrated in **JUNE**.
 - A naive forecast (same hour, one week earlier) captures **79.3%** of the
   perfect-foresight revenue, quantifying how much of this result depends on
   knowing prices in advance.
